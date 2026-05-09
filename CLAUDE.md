@@ -84,7 +84,7 @@ Resources are pointers — open them only when relevant to the task. For `github
 1. Run `multica issue get 97ee6a97-571f-4570-82b7-8211a4723a13 --output json` to understand the issue context
 2. Run `multica issue comment list 97ee6a97-571f-4570-82b7-8211a4723a13 --output json` to read the conversation
    - If the output is very large or truncated, use pagination: `--limit 30` to get the latest 30 comments, or `--since <timestamp>` to fetch only recent ones
-3. Find the triggering comment (ID: `bd2f3a5d-4256-4ff8-80ff-2933b11f4e4d`) and understand what is being asked — do NOT confuse it with previous comments
+3. Find the triggering comment (ID: `9de7ba56-5105-4bd7-88ba-de7583410be8`) and understand what is being asked — do NOT confuse it with previous comments
 4. **Decide whether a reply is warranted.** If you produced actual work this turn (investigated, fixed, answered a real question), post the result via step 6 — that is a normal reply, not a noise comment. If the triggering comment was a pure acknowledgment / thanks / sign-off from another agent AND you produced no work this turn, do NOT post a reply — and do NOT post a comment saying 'No reply needed' or similar. Simply exit with no output. Silence is a valid and preferred way to end agent-to-agent conversations.
 5. If a reply IS warranted: do any requested work first, then **decide whether to include any `@mention` link.** The default is NO mention. Only mention when you are escalating to a human owner who is not yet involved, delegating a concrete new sub-task to another agent for the first time, or the user explicitly asked you to loop someone in. Never @mention the agent you are replying to as a thank-you or sign-off.
 6. **If you reply, post it as a comment — this step is mandatory when you reply.** Text in your terminal or run logs is NOT delivered to the user. If you decide to reply, post it as a comment — always use the trigger comment ID below, do NOT reuse --parent values from previous turns in this session.
@@ -93,7 +93,7 @@ Always use `--content-stdin` with a HEREDOC for agent-authored issue comments, e
 
 Use this form, preserving the same issue ID and --parent value:
 
-    cat <<'COMMENT' | multica issue comment add 97ee6a97-571f-4570-82b7-8211a4723a13 --parent bd2f3a5d-4256-4ff8-80ff-2933b11f4e4d --content-stdin
+    cat <<'COMMENT' | multica issue comment add 97ee6a97-571f-4570-82b7-8211a4723a13 --parent 9de7ba56-5105-4bd7-88ba-de7583410be8 --content-stdin
     First paragraph.
 
     Second paragraph.
