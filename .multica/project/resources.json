@@ -1,0 +1,13 @@
+{
+  "project_id": "5088ca10-3b46-444f-b7db-8339dfca13c8",
+  "project_title": "H5微信跳一跳",
+  "resources": [
+    {
+      "id": "d94cb0e1-55c5-4072-ba4c-1fb570acd2f7",
+      "resource_type": "github_repo",
+      "resource_ref": {
+        "url": "https://github.com/dengchengchao/ai-demo"
+      }
+    }
+  ]
+}
